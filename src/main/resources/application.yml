@@ -1,3 +1,19 @@
 spring:
   application:
     name: 5060kiosk
+
+#
+  datasource:
+    url : jdbc:postgresql://localhost:5432/kiosk
+    username : kiosk_user
+    password : kiosk1234
+    driver-class-name : org.postgresql.Driver
+
+  
+  # JPA ddl, Naming and log
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
